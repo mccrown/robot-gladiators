@@ -36,7 +36,7 @@ var fightOrSkip = function(){
 //fight function
 var fight = function (enemy) {
   //keep track of who goes first
-  var isPlayerTurn = True;
+  var isPlayerTurn = true;
   if (Math.random() > 0.5) {
     isPlayerTurn = false;
   }
@@ -105,7 +105,6 @@ var startGame = function () {
       pickedEnemyObj.health = randomNumber(40, 60);
 
       // use debugger to pause script from running and check what's going on at that moment in the code
-      // debugger;
 
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
       fight(pickedEnemyObj);
