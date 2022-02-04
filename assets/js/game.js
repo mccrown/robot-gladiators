@@ -11,7 +11,7 @@ var fightOrSkip = function(){
   var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP; to choose.");
 
   //Conditional Recursive Function Call if the `promptFight` is NOT a valid value, then execute the following statements.
-  if (!promptFight){
+  if (promptFight === "" || promptFight === null){
     window.alert("You need to provide a valid answer! Please try again.");
     return fightOrSkip();
   }
@@ -27,10 +27,9 @@ var fightOrSkip = function(){
       playerInfo.money = Math.max(0, playerInfo.money - 10);
       return true;
     }
-    shop();
   }
   return false;
-}
+};
 
 
 //fight function
